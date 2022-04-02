@@ -127,9 +127,8 @@ public class AnagramFinder {
      *                 {@code List&lt;V&gt;} value-set.
      */
     private <K, V> void addItemToListMap(Map<K, List<V>> map, K key, V newValue) {
-        List<V> tempList = map.get(key);
-        tempList.add(newValue);
-        map.replace(key, tempList);
+        List<V> valueList = map.get(key);
+        valueList.add(newValue);
     }
 
     // Driver method for testing purposes only.
