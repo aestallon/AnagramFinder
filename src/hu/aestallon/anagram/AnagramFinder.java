@@ -21,6 +21,10 @@ import java.util.*;
  * needs <b>324 ms</b> on average to process the provided
  * {@code input.txt}. The testing method used was {@link #main(String[])}
  * as is.
+ * </p><p>
+ * <b>IMPORTANT:</b> Before running the program, change the
+ * <b>project encoding</b> to {@code windows-1258}, as this was the encoding
+ * used for the {@code input.txt}!
  * </p>
  *
  * @author Szabolcs Bazil Papp <papp.szabolcs.bazil@gmail.com>
@@ -132,7 +136,7 @@ public class AnagramFinder {
     public static void main(String[] args) {
         AnagramFinder af = new AnagramFinder();
         long start = Calendar.getInstance().getTimeInMillis();
-        Map<String, List<String>> anagrams = af.getAnagrams(new File("files\\input.txt"));
+        Map<String, List<String>> anagrams = af.getAnagrams(new File("resources\\input.txt"));
         long elapsed = Calendar.getInstance().getTimeInMillis() - start;
         System.out.println("Completed in " + elapsed + "ms");
 
